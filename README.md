@@ -19,7 +19,16 @@ vagrant up
 
 ## Usage
 
-Le serveur HTTP tourne à l'adresse suivante : [localhost:8080](localhost:8080)
+Le serveur HTTP tourne à l'adresse suivante : [localhost:8080](http://localhost:8080)
 
 Il est possible d'ouvrir un terminal dans la VM via `vagrant ssh`
+
+**Attention**, en vue d'utiliser `git` correctement, il est important de setup les données utilisateurs.
+
+```
+git config --global user.name "<user_name>"
+
+git config --global user.email "<user_email>"
+```
+
 
