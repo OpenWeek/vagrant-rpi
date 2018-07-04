@@ -31,4 +31,6 @@ git config --global user.name "<user_name>"
 git config --global user.email "<user_email>"
 ```
 
+_Avant de détruire votre VM avec `vagrant destroy` ou de l'arrêter avec `vagrant halt`, n'oubliez pas de push votre code vers votre repo distant ! Sinon, perte de travail garantie._
+
 
