@@ -21,8 +21,7 @@ git clone https://github.com/OpenWeek/ow-rpi
 pip install --upgrade pip
 
 cd ow-rpi
-git checkout develop 
-git pull origin develop
+git pull origin master
 
 pip install -r requirements.txt
 
