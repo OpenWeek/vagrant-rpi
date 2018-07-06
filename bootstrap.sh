@@ -13,6 +13,7 @@ apk add rrdtool rrdtool-dev rrdtool-utils
 apk add libxml2 libxml2-dev libxml2-utils
 apk add libxslt libxslt-dev
 apk add linux-headers
+apk add tree
 
 adduser www -DH
 
