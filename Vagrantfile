@@ -12,9 +12,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "generic/alpine36"
+  config.vm.box = "generic/alpine38"
   config.vm.network :forwarded_port, guest:8080, host:8080
-  config.vm.network :forwarded_port, guest:9090, host:9090
   #config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   config.vm.provision :shell, path:"bootstrap.sh"
 
