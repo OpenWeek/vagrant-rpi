@@ -1,6 +1,6 @@
 # vagrant-rpi
 
-Ce repo reprend les fichiers nécessaires à la création d'une machine virtuelle servant d'environnement de développement pour le projet de [station météo sur RaspberryPi](https://github.com/OpenWeek/ow-rpi)
+Ce repo reprend les fichiers nécessaires à la création d'une machine virtuelle servant d'environnement de développement pour les projets basé sur la plateforme Raspberry Pi dans le cadre de l'OpenWeek.
 
 ## Prérequis
 
@@ -19,11 +19,35 @@ vagrant up
 
 ## Usage
 
-Le serveur HTTP tourne à l'adresse suivante : [localhost:8080](http://localhost:8080)
+- Pour lancer le serveur HTTP :
 
-Il est possible d'ouvrir un terminal dans la VM via `vagrant ssh`
+```
+cd /var/www/data-logger
 
-**Attention**, en vue d'utiliser `git` correctement, il est important de setup les données utilisateurs.
+lighttpd -f wsgi_server/lighttpd.conf -D
+```
+
+> Le serveur HTTP tourne à l'adresse suivante : [localhost:8080](http://localhost:8080)
+
+- Il est possible d'ouvrir un terminal dans la VM via `vagrant ssh`
+
+- Si vous souhaitez pouvoir utiliser votre éditeur de texte / IDE préféré, vous pouvez monter le dossier de l'application en dehors de la VM à l'aide du programme ```sshfs```.
+
+> Utilisation : 
+
+```
+sshfs vagrant@0.0.0.0:/var/www/data-logger <mountpoint sur votre fs> -p 2222
+```
+
+> Le mot de passe demandé est `vagrant`.
+
+> Pour démonter le dossier venant de la VM :
+
+```
+umount <mountpoint sur votre fs>
+```
+
+**Attention**, en vue d'utiliser `git` correctement, il est important de setup les données utilisateurs (lorsque vous avez ouvert un terminal dans la VM après `vagrant ssh`).
 
 ```
 git config --global user.name "<user_name>"
