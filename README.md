@@ -40,6 +40,7 @@ sshfs vagrant@0.0.0.0:/var/www/data-logger <mountpoint sur votre fs> -p 2222
 ```
 
 > Le mot de passe demandé est `vagrant`.
+> **!!! PENSEZ A CHANGER CE MDP PAR DEFAUT PAR UN AUTRE DE VOTRE CHOIX !!!**
 
 > Pour démonter le dossier venant de la VM :
 
