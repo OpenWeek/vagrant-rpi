@@ -26,6 +26,8 @@ EOF
 
 adduser www -DH
 
+git clone git clone https://github.com/OpenWeek/data-logger.wiki.git
+
 cd /var/www
 git clone https://github.com/OpenWeek/data-logger
 chown vagrant -R data-logger
