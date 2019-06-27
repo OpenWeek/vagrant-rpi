@@ -19,7 +19,7 @@ vagrant up
 
 ## Usage
 
-- Le wiki du projet est disponible localement dans ```/home/vagrant/data-logger.wiki```
+- Le wiki du projet est disponible localement dans ```/var/www/data-logger.wiki```
 
 - Pour lancer le serveur HTTP :
 
