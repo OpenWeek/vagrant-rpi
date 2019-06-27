@@ -33,6 +33,11 @@ adduser www -DH
 addgroup data-logger
 usermod -a -G data-logger www
 
+if [ -d /home/vagrant ]
+then
+  usermod -a -G data-logger vagrant
+fi
+
 cd /var/www
 git clone https://github.com/OpenWeek/data-logger
 git clone https://github.com/OpenWeek/data-logger.wiki.git
